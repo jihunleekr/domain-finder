@@ -11,17 +11,21 @@
     "@types/react": "^16.9.53",
     "@types/react-dom": "^16.9.8",
     "commander": "^6.2.1",
+    "delay": "^4.4.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.1",
+    "ts-node": "^9.1.1",
     "typescript": "^4.0.3",
-    "web-vitals": "^0.2.4"
+    "web-vitals": "^0.2.4",
+    "whois": "^2.13.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "cli": "ts-node ./src/cli.ts"
   },
   "eslintConfig": {
     "extends": [
@@ -40,5 +44,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "type": "module"
 }

@@ -1,46 +1,45 @@
-# Getting Started with Create React App
+## 사용가능한 스크립트
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### `npm run cli -- -t <TLD> -l <length>`
 
-## Available Scripts
+등록되지 않은 도메인을 찾습니다.
 
-In the project directory, you can run:
+```
+$ npm run cli -- -t .com -l 3 > .com.txt
+```
 
-### `yarn start`
+## 지원하는 도메인
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- .ai
+- .app
+- .ca
+- .cn
+- .co
+- .com
+- .de
+- .gg
+- .id
+- .id
+- .info
+- .is
+- .jp
+- .kr
+- .link
+- .me
+- .net
+- .org
+- .page
+- .ru
+- .tv
+- .us
+- .vc
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 제한사항
 
-### `yarn test`
+- 4글자 이상은 매우 느립니다.
+- 일부 도메인의 경우 쿼리제한으로 검색도중 차단 당하는 경우도 있습니다.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 업데이트 예정
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- TLD 추가
+- 단어장을 이용하여 단어 및 단어 조합 검색 추가
