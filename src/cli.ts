@@ -7,6 +7,8 @@ program
   .version("0.1.0")
   .option("-t, --tld <tld>", "top level domain", ".com")
   .option("-l, --length <length>", "domain length", "3")
+  .option("-s, --start <start>", "domain starts with", "")
+  .option("-e, --end <end>", "domain ends with", "")
   .parse(process.argv);
 
 interface TNotFoundMessage {
@@ -15,6 +17,8 @@ interface TNotFoundMessage {
 
 const rootDomain = program.tld;
 const charLength = parseInt(program.length);
+const startChars = program.start;
+const endChars = program.end;
 const notFoundMessage: TNotFoundMessage = {
   ".ai": "No Object Found",
   ".app": "Domain not found",
@@ -97,14 +101,14 @@ const checkDomains = (hostnames: string[], rootDomain: string) => {
 // main
 (async () => {
   if (notFoundMessage.hasOwnProperty(rootDomain)) {
-    console.log("searching...", "".padStart(charLength, "???") + rootDomain);
+    console.log("searching...", startChars + "".padStart(charLength, "?") + endChars + rootDomain);
     const length = 1000;
     const permutations = permutator(getAtoZ(), charLength);
     for (let j = 0; j < permutations.length; j += length) {
       let hostnames = [];
       for (let i = j; i < j + length; i++) {
         if (permutations[i]) {
-          hostnames.push(permutations[i].join(""));
+          hostnames.push(startChars + permutations[i].join("") + endChars);
         }
       }
       const results = await checkDomains(hostnames, rootDomain);
