@@ -1,11 +1,19 @@
 ## 사용가능한 스크립트
 
-### `npm run cli -- -t <TLD> -l <length>`
+### `npm run cli -- -t <TLD> -l <length> -s <start> -e <end>`
 
 등록되지 않은 도메인을 찾습니다.
 
 ```
 $ npm run cli -- -t .com -l 3 > .com.txt
+```
+
+```
+$ npm run cli -- -t .com -l 3 -s zk > .com.txt 
+```
+
+```
+$ npm run cli -- -t .com -l 3 -e zk > .com.txt 
 ```
 
 ## 지원하는 도메인
