@@ -25,7 +25,7 @@ const notFoundMessage: TNotFoundMessage = {
   ".ca": "Not found",
   ".cn": "No matching record",
   ".co": "No Data Found",
-  ".com": "is available for registration",
+  ".com": "No match for domain",
   ".de": "Status: free",
   ".eu": "Status: AVAILABLE", // 작동하지 않음
   ".gg": "NOT FOUND",
